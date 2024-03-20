@@ -105,6 +105,8 @@ if __name__ == '__main__':
         trial = trials[trial_index]
         with open(f'trial{trial_index}.csv', 'w') as f:
             writer = csv.writer(f)
-            writer.writerow(['Samples'])
+            writer.writerow(['audio_url'])
             for sample in trial:
+                print(sample)
+                sample = "https://github.com/BenJaEGo/audio_samples" + sample[1:]
                 writer.writerow([sample])
